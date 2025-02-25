@@ -35,9 +35,11 @@ const forgotPassword = asyncHandler(async (req, res, next) => {
 
   // send the token to the users email
 
-  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "https://clip-zone-rho.vercel.app"; // Adjust for production
-  
+  // const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+  // const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "https://clip-zone-rho.vercel.app"; // Adjust for production
+  const protocol = "https"; // Backend is always hosted on HTTPS (Render)
+const clientUrl = "https://clip-zone-rho.vercel.app"; 
+
   const verificationUrl = `${protocol}://${clientUrl}/verify-email/${token}`;
   // Email configuration
   const mailOptions = {
@@ -166,8 +168,10 @@ const registerUser = asyncHandler(async (req, res, next) => {
   createdUser.emailVerificationToken = token;
   await createdUser.save();
 
-  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "https://clip-zone-rho.vercel.app"; // Adjust for production
+//   const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+// const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "https://clip-zone-rho.vercel.app"; // Adjust for production
+const protocol = "https"; // Backend is always hosted on HTTPS (Render)
+const clientUrl = "https://clip-zone-rho.vercel.app"; 
 
 const verificationUrl = `${protocol}://${clientUrl}/verify-email/${token}`;
 
@@ -345,9 +349,11 @@ const resendEmailVerification = asyncHandler(async (req, res, next) => {
   user.emailVerificationToken = token;
   await user.save();
 
-  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "https://clip-zone-rho.vercel.app"; // Adjust for production
-  
+  // const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+  // const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "https://clip-zone-rho.vercel.app"; // Adjust for production
+  const protocol = "https"; // Backend is always hosted on HTTPS (Render)
+const clientUrl = "https://clip-zone-rho.vercel.app"; 
+
   const verificationUrl = `${protocol}://${clientUrl}/verify-email/${token}`;
 
   const mailOptions = {
