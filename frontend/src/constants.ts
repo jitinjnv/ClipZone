@@ -2,7 +2,7 @@
 //   process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : '';
 
 
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://clipzone.onrender.com";
 
 export const USERS_URL = "/api/v1/users";
 export const VIDEOS_URL = "/api/v1/videos";

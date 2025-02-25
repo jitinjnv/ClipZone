@@ -130,7 +130,7 @@ export function PageHeaderFirstSection({
       <Link to="/">
         <img
           src={Logo}
-          className="h-4 sm:h-6"
+          className="h-12 sm:h-16"
           alt="VideoCave Logo"
           loading="lazy"
         />

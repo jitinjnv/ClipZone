@@ -36,7 +36,7 @@ const forgotPassword = asyncHandler(async (req, res, next) => {
   // send the token to the users email
 
   const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "yourdomain.com"; // Adjust for production
+  const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "https://clip-zone-rho.vercel.app/"; // Adjust for production
   
   const verificationUrl = `${protocol}://${clientUrl}/verify-email/${token}`;
   // Email configuration
@@ -167,7 +167,7 @@ const registerUser = asyncHandler(async (req, res, next) => {
   await createdUser.save();
 
   const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "yourdomain.com"; // Adjust for production
+const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "https://clip-zone-rho.vercel.app/"; // Adjust for production
 
 const verificationUrl = `${protocol}://${clientUrl}/verify-email/${token}`;
 
@@ -346,7 +346,7 @@ const resendEmailVerification = asyncHandler(async (req, res, next) => {
   await user.save();
 
   const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
-  const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "yourdomain.com"; // Adjust for production
+  const clientUrl = process.env.NODE_ENV === "development" ? "localhost:5173" : "https://clip-zone-rho.vercel.app/"; // Adjust for production
   
   const verificationUrl = `${protocol}://${clientUrl}/verify-email/${token}`;
 

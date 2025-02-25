@@ -14,7 +14,7 @@
     server: {
       proxy: mode === 'development' ? {
         "/api": {
-          target: "http://localhost:8000",
+          target: "https://clipzone.onrender.com",
         },
 
       } : undefined,
