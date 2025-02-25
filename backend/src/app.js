@@ -8,7 +8,7 @@ const app = express();
 
 const allowedOrigins = [
   
-  "http://localhost:5173","https://clip-zone-rho.vercel.app/" // Add other allowed origins as necessary
+  "http://localhost:5173","https://clip-zone-rho.vercel.app" // Add other allowed origins as necessary
 ];
 
 app.use(
